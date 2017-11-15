@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta iname="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style>
+		.box{
+			width: 560px;
+			height: 440px;
+			border: 2px solid black;
+		}
+		p{
+			font-size: 15px;
+			margin-left: 20px;
+			margin-bottom: 30px;
+		}
+		span{
+			font-size: 22px;
+			font-weight: bold;
+			display: inline-block;
+		}
+		img{
+			width: 200px;
+			height: 200px;
+			float: right;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="./logo.jpg"/>
+		<p>采购订单:
+			<span id="order">8100194254</span>
+		</p>
+		<p>产品编码:
+			<span id="pid">9200031314</span>
+		</p>
+		<p>供应商名称:
+			<span id="ifrom">和翔</span>
+		</p>
+		<p>产品名称:
+			<br/><br/><span id="iname">和翔 1701 书椅 金色檀木色 金丝檀木 </span><br />
+			<span id="size">59*50*101cm</span>
+		</p>
+		<p>数量（单位）:
+			<span id="connet">PC</span>
+		</p>
+		<p>辅助数量:
+			<span id="num">1</span>
+		</p>
+	</div>
+	<br/><br/><br/><br/>
+	<div class="inp">
+		采购订单： <input id='orderinfo' type="text" value="" />
+		产品编码： <input type="text" id='pidinfo'   value="" />
+		供应商名称： <input type="text" id='ifrominfo'   value="" />
+		产品名称： <input type="text" id='nameinfo' value="" />
+		尺寸： <input type="text" id='sizeinfo'   value="" /><br />
+		数量（单位）： <input type="text" id='connetinfo'   value="" />
+		辅助数量： <input type="text" id='numinfo'   value="" />
+		<input id='btn' type="button" value="确定" />
+		<input id='clear' type="button" value="清空" />
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	var but=document.getElementById('btn');
+	btn.onclick=function(){
+		order.innerHTML=orderinfo.value;
+		pid.innerHTML=pidinfo.value;
+		ifrom.innerHTML=ifrominfo.value;
+		iname.innerHTML=nameinfo.value;
+		size.innerHTML=sizeinfo.value;
+		connet.innerHTML=connetinfo.value;
+		num.innerHTML=numinfo.value;
+	}
+	clear.onclick=function(){
+		orderinfo.value=''
+		pidinfo.value=''
+		ifrominfo.value=''
+		nameinfo.value=''
+		sizeinfo.value=''
+		connetinfo.value=''
+		numinfo.value=''
+	}
+</script>
